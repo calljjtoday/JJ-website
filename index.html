@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JJ Kramer — Southern Oregon's #1 Real Estate Agent. #1 in Jackson County, #3 in Oregon. Buy, sell, or invest in the Rogue Valley. Call (541) 840-2992.">
+  <meta property="og:title" content="JJ Kramer | Southern Oregon's #1 Real Estate Agent">
+  <meta property="og:description" content="A home sold every 4 days. 99% of list price. Call JJ today.">
+  <meta property="og:url" content="https://calljjtoday.com">
+  <meta property="og:type" content="website">
+  <title>JJ Kramer | Southern Oregon's #1 Real Estate Agent | calljjtoday.com</title>
+  <link rel="canonical" href="https://calljjtoday.com">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Google Analytics — replace UA-XXXXXXXX -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+  <!-- Facebook Pixel — replace XXXXXXXXXXXXXXXX -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){...}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
+  -->
+  <style>
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+    .nav-links a.active { color: var(--gold-light); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div id="nav-placeholder"></div>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Southern Oregon's #1 Agent · 2023, 2024 &amp; 2025
+    </div>
+    <h1 class="hero-title">
+      Southern Oregon<br>Real Estate,
+      <em>Done Right.</em>
+    </h1>
+    <p class="hero-subtitle">
+      JJ Kramer closes <strong>a home every 4 days</strong> — averaging
+      99% of list price and 44 days on market. Whether you're buying,
+      selling, or investing in the Rogue Valley, there's one call to make.
+    </p>
+    <div class="hero-ctas">
+      <a href="/pages/sell.html" class="btn btn-primary">🏠 Get My Home's Value</a>
+      <a href="/pages/buy.html" class="btn btn-secondary light">Browse Listings →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">#1</div>
+        <div class="stat-label">Jackson County</div>
+      </div>
+      <div>
+        <div class="stat-num">#3</div>
+        <div class="stat-label">Oregon Statewide</div>
+      </div>
+      <div>
+        <div class="stat-num">13×</div>
+        <div class="stat-label">Top 1% Producer</div>
+      </div>
+      <div>
+        <div class="stat-num">99%</div>
+        <div class="stat-label">Of List Price</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Netlify form requires hidden input for form-name -->
+    <div class="hero-card">
+      <h3>Get Your Free Home Value</h3>
+      <p>Instant estimate + JJ's personal market analysis within 24 hours</p>
+
+      <form id="hero-form" name="home-valuation-hero" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="home-valuation-hero">
+        <input type="hidden" name="source" value="Hero Form">
+        <input type="hidden" name="lead-type" value="Seller Lead">
+        <p style="display:none"><input name="bot-field"></p>
+
+        <div class="form-group">
+          <label>Property Address</label>
+          <input type="text" name="address" placeholder="123 Main St, Medford, OR" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="(541) 000-0000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>I'm looking to…</label>
+          <select name="intent">
+            <option value="sell">Sell my home</option>
+            <option value="buy">Buy a home</option>
+            <option value="invest">Invest in property</option>
+            <option value="value">Just curious about value</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Get My Free Valuation →</button>
+        <div class="form-trust">
+          <div class="stars">★★★★★</div>
+          <span>500+ reviews · No obligation · 24hr response</span>
+        </div>
+      </form>
+
+      <div id="hero-success" class="form-success">
+        <div class="checkmark">✓</div>
+        <h4>Request Received!</h4>
+        <p>JJ will personally review your property and reach out within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TRUST BAR
+══════════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-item">🏆 #1 Agent Jackson County — 3 Years Running</div>
+  <div class="trust-item">📞 (541) 840-2992 — Call Anytime</div>
+  <div class="trust-item">⚡ A Home Sold Every 4 Days</div>
+  <div class="trust-item">💰 99% of List Price, Every Time</div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label fade-up">What JJ Does Best</span>
+    <h2 class="section-title fade-up">Every Client. Every Transaction.<br>Unmatched Results.</h2>
+
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">🏡</div>
+        <h3>Buying a Home</h3>
+        <p>Access every listing in Southern Oregon the moment it hits. JJ's negotiation expertise means you get the home — at the right price.</p>
+        <a href="/pages/buy.html" class="service-link">Start Your Search →</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💵</div>
+        <h3>Selling Your Home</h3>
+        <p>99% of list price, 44 avg days on market. JJ's proven system gets sellers more money, faster than anyone in the Valley.</p>
+        <a href="/pages/sell.html" class="service-link">Get a Free Valuation →</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📈</div>
+        <h3>Investment Properties</h3>
+        <p>From single-family rentals to multi-family income properties, JJ delivers ROI-focused guidance on every investment transaction.</p>
+        <a href="/pages/invest.html" class="service-link">Visit Investor Hub →</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💎</div>
+        <h3>Luxury Homes</h3>
+        <p>Part of John L. Scott's Luxury Alliance — specializing in properties over $1M with exclusive global marketing reach.</p>
+        <a href="/pages/luxury.html" class="service-link">View Exceptional Homes →</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🚛</div>
+        <h3>Relocation</h3>
+        <p>Moving to Southern Oregon? JJ's team handles every detail — neighborhoods, schools, commutes — making your move seamless.</p>
+        <a href="/pages/relocate.html" class="service-link">Relocation Guide →</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🏘️</div>
+        <h3>New Development</h3>
+        <p>Exclusive access to new construction and pre-market opportunities in Willow Bend and emerging Jackson County communities.</p>
+        <a href="/pages/new-homes.html" class="service-link">See New Builds →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     VALUATION TEASER
+══════════════════════════════════════════════ -->
+<section class="valuation" id="valuation">
+  <div class="container">
+    <div class="val-grid">
+      <div>
+        <span class="section-label fade-up">Seller Intelligence</span>
+        <h2 class="section-title fade-up">What Is Your<br>Home Worth Today?</h2>
+        <p class="section-body fade-up">Southern Oregon's market moves fast. JJ's free home valuation combines real-time MLS data with 20+ years of local expertise — not just an algorithm.</p>
+        <div class="val-steps fade-up">
+          <div class="val-step">
+            <div class="val-step-num">1</div>
+            <div class="val-step-text">
+              <strong>Submit your address</strong>
+              <span>Takes 30 seconds</span>
+            </div>
+          </div>
+          <div class="val-step">
+            <div class="val-step-num">2</div>
+            <div class="val-step-text">
+              <strong>JJ reviews your property</strong>
+              <span>Real expertise, not just a Zestimate</span>
+            </div>
+          </div>
+          <div class="val-step">
+            <div class="val-step-num">3</div>
+            <div class="val-step-text">
+              <strong>Get your full market report</strong>
+              <span>Within 24 hours, no obligation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="val-tool fade-up">
+        <h3>Free Home Valuation</h3>
+        <div class="val-tool-sub">No obligation. JJ responds within 24 hours.</div>
+
+        <form id="valuation-form" name="home-valuation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="home-valuation">
+          <input type="hidden" name="source" value="Valuation Section">
+          <input type="hidden" name="lead-type" value="Seller Lead">
+          <p style="display:none"><input name="bot-field"></p>
+
+          <div class="form-group">
+            <label class="dark">Property Address</label>
+            <input type="text" name="address" class="light" placeholder="123 Main St, Medford, OR 97501" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="dark">Bedrooms</label>
+              <select name="bedrooms" class="light">
+                <option>2 Beds</option><option selected>3 Beds</option>
+                <option>4 Beds</option><option>5+ Beds</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="dark">Bathrooms</label>
+              <select name="bathrooms" class="light">
+                <option>1 Bath</option><option>2 Baths</option>
+                <option selected>3 Baths</option><option>4+ Baths</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="dark">Your Name</label>
+              <input type="text" name="name" class="light" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label class="dark">Phone</label>
+              <input type="tel" name="phone" class="light" placeholder="(541) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="dark">Email</label>
+            <input type="email" name="email" class="light" placeholder="you@email.com" required>
+          </div>
+          <button type="submit" class="btn btn-dark btn-full">Get My Free Home Value →</button>
+          <div class="val-trust">
+            <div class="val-trust-item">🔒 Private</div>
+            <div class="val-trust-item">📅 No Obligation</div>
+            <div class="val-trust-item">⚡ 24hr Response</div>
+          </div>
+        </form>
+
+        <div id="valuation-success" class="form-success" style="background:none;">
+          <div class="checkmark" style="background:rgba(201,146,42,0.1);border-color:var(--gold);">✓</div>
+          <h4 style="color:var(--navy);">Request Received!</h4>
+          <p style="color:#666;">JJ will personally review your property and be in touch within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     INVESTOR TEASER
+══════════════════════════════════════════════ -->
+<section class="investor" id="invest">
+  <div class="investor-bg"></div>
+  <div class="investor-inner container">
+    <span class="section-label fade-up">For Investors</span>
+    <div class="investor-grid">
+      <div>
+        <h2 class="section-title light fade-up">The Rogue Valley<br>Investor Hub</h2>
+        <p class="section-body light fade-up">Southern Oregon is one of the Pacific Northwest's most underrated investment markets — strong rental demand, appreciating values, and a pipeline of value-add opportunities.</p>
+        <div class="investor-features fade-up">
+          <div class="inv-feature">
+            <div class="inv-icon">🔔</div>
+            <div>
+              <h4>Deal Alerts — Get Notified First</h4>
+              <p>Investment properties the moment they hit — before they're gone.</p>
+            </div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">📋</div>
+            <div>
+              <h4>Curated Investment Listings</h4>
+              <p>Multi-family, price-reduced, and value-add properties analyzed for you.</p>
+            </div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">📄</div>
+            <div>
+              <h4>Free 1031 Exchange Guide</h4>
+              <p>JJ's guide to tax-deferred exchanges in Southern Oregon.</p>
+            </div>
+          </div>
+        </div>
+        <a href="/pages/invest.html" class="btn btn-primary" style="margin-top:32px">Visit Investor Hub →</a>
+      </div>
+
+      <!-- ROI Calculator -->
+      <div class="roi-calc fade-up">
+        <h3>Investment ROI Calculator</h3>
+        <div class="roi-calc-sub">Estimate returns on any Southern Oregon property</div>
+
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Purchase Price <span id="price-display">$425K</span></div>
+          <input type="range" id="calc-price" min="150000" max="1500000" step="25000" value="425000">
+        </div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Monthly Rent <span id="rent-display">$2,200</span></div>
+          <input type="range" id="calc-rent" min="800" max="6000" step="100" value="2200">
+        </div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Down Payment <span id="down-display">20%</span></div>
+          <input type="range" id="calc-down" min="10" max="40" step="5" value="20">
+        </div>
+
+        <div class="roi-results">
+          <div class="roi-metric">
+            <div class="roi-metric-val" id="result-cap">—</div>
+            <div class="roi-metric-label">Cap Rate</div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-metric-val" id="result-cf">—</div>
+            <div class="roi-metric-label">Monthly Cash Flow</div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-metric-val" id="result-coc">—</div>
+            <div class="roi-metric-label">Cash-on-Cash</div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-metric-val" id="result-grm">—</div>
+            <div class="roi-metric-label">Gross Rent Mult.</div>
+          </div>
+        </div>
+        <a href="/pages/invest.html#alerts" class="btn btn-primary btn-full" style="margin-top:20px">Get Investment Listings →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     ABOUT TEASER
+══════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-up">
+        <div class="about-img">
+          <!-- Replace with JJ's actual photo: <img src="/images/jj-kramer.jpg" alt="JJ Kramer"> -->
+          <span>👤</span>
+        </div>
+        <div class="about-badge">
+          <div class="num">4</div>
+          <div class="lbl">Days per sale</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label fade-up">About JJ</span>
+        <h2 class="section-title fade-up">Jordan "JJ" Kramer<br><em style="font-style:italic;color:var(--gold)">Southern Oregon's Top Producer.</em></h2>
+        <p class="section-body fade-up">Since 2002, JJ has built his reputation on one principle: <strong>super communication is the key.</strong> He's personally reachable, passionately involved, and fiercely committed to your outcome. His full-time team of 8 ensures every client gets white-glove service from first conversation to closing day.</p>
+        <div class="about-accolades fade-up">
+          <div class="accolade"><div class="accolade-dot"></div><span>#1 Agent in Southern Oregon 2023, 2024 &amp; 2025</span></div>
+          <div class="accolade"><div class="accolade-dot"></div><span>Top 1% Producer — 13 Consecutive Years</span></div>
+          <div class="accolade"><div class="accolade-dot"></div><span>Luxury Alliance Member — $1M+ Specialist</span></div>
+          <div class="accolade"><div class="accolade-dot"></div><span>99% of List Price — Year-Round</span></div>
+          <div class="accolade"><div class="accolade-dot"></div><span>Mail Tribune "Best of the Best" Agent</span></div>
+          <div class="accolade"><div class="accolade-dot"></div><span>Real Trends Best Real Estate Teams 2022</span></div>
+        </div>
+        <a href="/pages/about.html" class="btn btn-dark" style="margin-top:32px">Meet JJ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <span class="section-label fade-up">Client Stories</span>
+    <h2 class="section-title fade-up">What Southern Oregon<br>Is Saying About JJ</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"The best real estate professionals to work with. Literally the most knowledgeable agent in the Rogue Valley — you can tell real estate is JJ's passion."</p>
+        <div class="t-author">Matt Smith</div>
+        <div class="t-detail">Buyer · Medford, OR</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"I have purchased and sold 10 homes with several great agents — none compare to the professional experience I had with JJ and his team."</p>
+        <div class="t-author">M. Gremillion</div>
+        <div class="t-detail">Seller · Jackson County, OR</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"JJ hit a home run selling my house very quickly. Great communication the whole way through. This team absolutely knows what they're doing."</p>
+        <div class="t-author">J. Whites</div>
+        <div class="t-detail">Seller · Rogue Valley, OR</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="/pages/about.html#reviews" class="btn btn-secondary">Read All Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     AREAS
+══════════════════════════════════════════════ -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="areas-grid-wrap">
+      <div>
+        <span class="section-label fade-up">Coverage Area</span>
+        <h2 class="section-title light fade-up">All of Southern Oregon.</h2>
+        <p class="section-body light fade-up">JJ knows every neighborhood, every school district, and every market trend across Jackson County.</p>
+        <a href="/pages/buy.html" class="btn btn-primary" style="margin-top:28px">Browse All Listings →</a>
+      </div>
+      <div class="areas-grid fade-up">
+        <a href="/pages/areas/central-point.html" class="area-pill featured">Central Point ⭐</a>
+        <a href="/pages/areas/medford.html" class="area-pill">Medford</a>
+        <a href="/pages/areas/jacksonville.html" class="area-pill">Jacksonville</a>
+        <a href="/pages/areas/eagle-point.html" class="area-pill">Eagle Point</a>
+        <a href="/pages/areas/ashland.html" class="area-pill">Ashland</a>
+        <a href="/pages/areas/white-city.html" class="area-pill">White City</a>
+        <a href="/pages/areas/shady-cove.html" class="area-pill">Shady Cove</a>
+        <a href="/pages/areas/gold-hill.html" class="area-pill">Gold Hill</a>
+        <a href="/pages/areas/rogue-river.html" class="area-pill">Rogue River</a>
+        <a href="/pages/areas/phoenix.html" class="area-pill">Phoenix</a>
+        <a href="/pages/areas/talent.html" class="area-pill">Talent</a>
+        <a href="/pages/buy.html" class="area-pill">All Areas →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     CTA BAND
+══════════════════════════════════════════════ -->
+<div class="cta-band">
+  <div>
+    <h2>Ready to Make Your Move<br>in Southern Oregon?</h2>
+    <p>One call. The #1 agent. Your best outcome.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="/pages/contact.html" class="btn btn-dark btn-full">Schedule a Free Consultation</a>
+    <div class="cta-phone">📞 (541) 840-2992</div>
+    <small style="color:rgba(11,31,58,0.5);font-size:12px;">Available 7 days · Call or text anytime</small>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

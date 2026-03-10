@@ -1,0 +1,44 @@
+# ============================================================
+# calljjtoday.com — Netlify Configuration
+# ============================================================
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# ── REDIRECTS ──
+[[redirects]]
+  from = "https://www.calljjtoday.com/*"
+  to   = "https://calljjtoday.com/:splat"
+  status = 301
+  force  = true
+
+# Keep JLS site accessible for existing backlinks
+[[redirects]]
+  from = "/jls"
+  to   = "https://jjkramer.johnlscott.com/home"
+  status = 302
+
+# ── HEADERS ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

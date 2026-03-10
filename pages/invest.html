@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Southern Oregon investment property hub. ROI calculator, deal alerts, 1031 exchange guide, and curated investment listings from JJ Kramer.">
+  <title>Investment Properties | Investor Hub | JJ Kramer Southern Oregon</title>
+  <link rel="canonical" href="https://calljjtoday.com/pages/invest.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .fade-up.visible{opacity:1;transform:none}
+    .invest-why{background:var(--white);padding:var(--section-pad)}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:48px}
+    .why-card{padding:28px 24px;background:var(--cream);border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,.06)}
+    .why-icon{font-size:28px;margin-bottom:14px}
+    .why-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+    .why-card p{font-size:13px;color:#777;line-height:1.6}
+    .deal-alerts{background:var(--cream);padding:var(--section-pad)}
+    .alerts-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,80px);align-items:center;margin-top:48px}
+    .case-studies{background:var(--white);padding:var(--section-pad)}
+    .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}
+    .case-card{background:var(--cream);border-radius:var(--radius-lg);padding:28px;border:1px solid rgba(0,0,0,.06);border-top:3px solid var(--gold)}
+    .case-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px}
+    .case-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:13px}
+    .case-row:last-child{border:none}
+    .case-row .label{color:#888}
+    .case-row .value{font-weight:700;color:var(--navy)}
+    .case-row .value.positive{color:#16a34a}
+    @media(max-width:768px){.alerts-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <span class="section-label">Investor Hub</span>
+    <h1>Southern Oregon<br><em>Investment Properties</em></h1>
+    <p>Strong rental demand, appreciating values, and a pipeline of value-add deals. JJ knows every opportunity before it hits the market.</p>
+  </div>
+</div>
+
+<!-- ROI CALCULATOR -->
+<section class="investor" id="calculator" style="padding:var(--section-pad)">
+  <div class="investor-bg"></div>
+  <div class="investor-inner container">
+    <div class="investor-grid">
+      <div>
+        <span class="section-label fade-up">Underwriting Tool</span>
+        <h2 class="section-title light fade-up">Investment ROI<br>Calculator</h2>
+        <p class="section-body light fade-up">Run the numbers on any Southern Oregon property before you make an offer. Adjust purchase price, rent, and down payment to see real-time returns.</p>
+        <div class="investor-features fade-up" style="margin-top:32px">
+          <div class="inv-feature">
+            <div class="inv-icon">📊</div>
+            <div><h4>Cap Rate</h4><p>Net operating income as a percentage of purchase price.</p></div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">💵</div>
+            <div><h4>Cash-on-Cash Return</h4><p>Annual cash flow divided by your actual cash invested.</p></div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">📅</div>
+            <div><h4>Gross Rent Multiplier</h4><p>Quick valuation metric: price divided by annual gross rent.</p></div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:20px">*Assumes 40% expense ratio, 7.25% mortgage rate, 30yr fixed. For illustration only.</p>
+      </div>
+
+      <div class="roi-calc fade-up">
+        <h3>ROI Calculator</h3>
+        <div class="roi-calc-sub">Estimate returns on any Southern Oregon property</div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Purchase Price <span id="price-display">$425K</span></div>
+          <input type="range" id="calc-price" min="150000" max="1500000" step="25000" value="425000">
+        </div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Monthly Rent <span id="rent-display">$2,200</span></div>
+          <input type="range" id="calc-rent" min="800" max="6000" step="100" value="2200">
+        </div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Down Payment <span id="down-display">20%</span></div>
+          <input type="range" id="calc-down" min="10" max="40" step="5" value="20">
+        </div>
+        <div class="roi-results">
+          <div class="roi-metric"><div class="roi-metric-val" id="result-cap">—</div><div class="roi-metric-label">Cap Rate</div></div>
+          <div class="roi-metric"><div class="roi-metric-val" id="result-cf">—</div><div class="roi-metric-label">Monthly Cash Flow</div></div>
+          <div class="roi-metric"><div class="roi-metric-val" id="result-coc">—</div><div class="roi-metric-label">Cash-on-Cash</div></div>
+          <div class="roi-metric"><div class="roi-metric-val" id="result-grm">—</div><div class="roi-metric-label">Gross Rent Mult.</div></div>
+        </div>
+        <a href="#alerts" class="btn btn-primary btn-full" style="margin-top:20px">Get Curated Investment Listings →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SOUTHERN OREGON -->
+<section class="invest-why">
+  <div class="container">
+    <span class="section-label fade-up">The Market</span>
+    <h2 class="section-title fade-up">Why Invest in<br>Southern Oregon?</h2>
+    <div class="why-grid">
+      <div class="why-card fade-up"><div class="why-icon">📈</div><h3>Steady Appreciation</h3><p>Jackson County home values have consistently appreciated, driven by in-migration from higher-cost California and Oregon markets.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">🏠</div><h3>Strong Rental Demand</h3><p>Medford's job market, proximity to Crater Lake, and year-round mild climate create consistent rental demand across all price points.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">💰</div><h3>Affordable Entry Points</h3><p>Compared to Portland or the Bay Area, Southern Oregon offers meaningful cap rates and cash flow at entry prices that are still accessible.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">🔑</div><h3>Off-Market Access</h3><p>As the #1 agent in the county, JJ sees distressed sales, estate properties, and motivated sellers before they hit the MLS.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEAL ALERTS -->
+<section class="deal-alerts" id="alerts">
+  <div class="container">
+    <div class="alerts-grid">
+      <div>
+        <span class="section-label fade-up">Never Miss a Deal</span>
+        <h2 class="section-title fade-up">Get Investment<br>Listings First.</h2>
+        <p class="section-body fade-up">JJ curates a monthly digest of the best investment opportunities in Jackson County — multi-family, price-reduced, value-add, and off-market properties — sent directly to your inbox before anyone else sees them.</p>
+        <div class="investor-features fade-up" style="margin-top:32px">
+          <div class="inv-feature">
+            <div class="inv-icon">🏘️</div>
+            <div><h4>Multi-Family Properties</h4><p>Duplexes, triplexes, and small apartment buildings across Jackson County.</p></div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">🏷️</div>
+            <div><h4>Price-Reduced Opportunities</h4><p>Motivated sellers and days-on-market 45+ properties with negotiation leverage.</p></div>
+          </div>
+          <div class="inv-feature">
+            <div class="inv-icon">🔨</div>
+            <div><h4>Value-Add Deals</h4><p>Properties with upside through renovation, repositioning, or rent optimization.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-calc fade-up" style="background:rgba(11,31,58,0.05);border:1px solid rgba(11,31,58,0.1);">
+        <h3 style="color:var(--navy)">Join the Deal Alert List</h3>
+        <div class="roi-calc-sub" style="color:#888">Free. Unsubscribe anytime. No spam — just deals.</div>
+
+        <form id="investor-form" name="investor-deal-alert" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="investor-deal-alert">
+          <input type="hidden" name="source" value="Investor Page - Deal Alerts">
+          <input type="hidden" name="lead-type" value="Investor Lead">
+          <p style="display:none"><input name="bot-field"></p>
+
+          <div class="form-group">
+            <label class="dark">Full Name</label>
+            <input type="text" name="name" class="light" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label class="dark">Email</label>
+            <input type="email" name="email" class="light" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="dark">Phone (optional)</label>
+            <input type="tel" name="phone" class="light" placeholder="(541) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="dark">Investment Budget</label>
+            <select name="budget" class="light">
+              <option>Under $300K</option>
+              <option selected>$300K–$600K</option>
+              <option>$600K–$1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="dark">Property Type Interest</label>
+            <select name="property-interest" class="light">
+              <option>Single Family Rental</option>
+              <option>Multi-Family (2–4 units)</option>
+              <option>Multi-Family (5+ units)</option>
+              <option>Any / Open</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark btn-full">Sign Me Up for Deal Alerts →</button>
+        </form>
+
+        <div id="investor-success" class="form-success" style="background:none;">
+          <div class="checkmark" style="background:rgba(201,146,42,0.1);border-color:var(--gold);color:var(--gold);">✓</div>
+          <h4 style="color:var(--navy);">You're on the list!</h4>
+          <p style="color:#666;">JJ will be in touch shortly, and you'll receive your first deal digest within the month.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1031 GUIDE -->
+<section class="investor" id="guide" style="padding:var(--section-pad)">
+  <div class="investor-bg"></div>
+  <div class="investor-inner container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,80px);align-items:center">
+      <div>
+        <span class="section-label fade-up">Tax Strategy</span>
+        <h2 class="section-title light fade-up">Free 1031 Exchange<br>Guide</h2>
+        <p class="section-body light fade-up">A 1031 exchange lets you sell an investment property and defer capital gains taxes by reinvesting into a like-kind property. Southern Oregon is one of the best replacement property markets in the Pacific Northwest.</p>
+        <p class="section-body light fade-up" style="margin-top:16px">JJ has helped dozens of investors execute successful 1031 exchanges in Jackson County. Download the free guide to understand the timeline, rules, and opportunities.</p>
+      </div>
+      <div class="roi-calc fade-up">
+        <h3>Download the Free Guide</h3>
+        <div class="roi-calc-sub">Sent instantly to your email</div>
+        <form name="guide-download" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="guide-download">
+          <input type="hidden" name="source" value="1031 Guide Download">
+          <input type="hidden" name="lead-type" value="Investor Lead - 1031">
+          <p style="display:none"><input name="bot-field"></p>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Me the 1031 Guide →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="container">
+    <span class="section-label fade-up">Track Record</span>
+    <h2 class="section-title fade-up">Investor Case Studies</h2>
+    <p class="section-body fade-up">Anonymized examples of investment transactions JJ has facilitated in Southern Oregon.</p>
+    <div class="cases-grid">
+      <div class="case-card fade-up">
+        <h3>Medford Duplex — Value-Add</h3>
+        <div class="case-row"><span class="label">Purchase Price</span><span class="value">$385,000</span></div>
+        <div class="case-row"><span class="label">Renovation</span><span class="value">$42,000</span></div>
+        <div class="case-row"><span class="label">Monthly Rent (After)</span><span class="value">$3,200</span></div>
+        <div class="case-row"><span class="label">Cap Rate</span><span class="value positive">6.4%</span></div>
+        <div class="case-row"><span class="label">Cash-on-Cash</span><span class="value positive">8.2%</span></div>
+      </div>
+      <div class="case-card fade-up">
+        <h3>Central Point SFR — Long-Term Hold</h3>
+        <div class="case-row"><span class="label">Purchase Price</span><span class="value">$295,000</span></div>
+        <div class="case-row"><span class="label">Monthly Rent</span><span class="value">$1,950</span></div>
+        <div class="case-row"><span class="label">2yr Appreciation</span><span class="value positive">+$48,000</span></div>
+        <div class="case-row"><span class="label">Cap Rate</span><span class="value positive">5.9%</span></div>
+        <div class="case-row"><span class="label">Total Return (2yr)</span><span class="value positive">24.1%</span></div>
+      </div>
+      <div class="case-card fade-up">
+        <h3>Eagle Point Triplex — 1031 Exchange</h3>
+        <div class="case-row"><span class="label">Exchange Into</span><span class="value">$620,000</span></div>
+        <div class="case-row"><span class="label">Monthly Rent</span><span class="value">$5,100</span></div>
+        <div class="case-row"><span class="label">Taxes Deferred</span><span class="value positive">~$85,000</span></div>
+        <div class="case-row"><span class="label">Cap Rate</span><span class="value positive">5.7%</span></div>
+        <div class="case-row"><span class="label">Units</span><span class="value">3</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div>
+    <h2>Ready to Invest in<br>Southern Oregon?</h2>
+    <p>Let's talk strategy. No pressure, just numbers.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="tel:5418402992" class="btn btn-dark btn-full">📞 Call JJ: (541) 840-2992</a>
+    <a href="#alerts" class="btn btn-secondary" style="width:100%;justify-content:center">Get Deal Alerts →</a>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
