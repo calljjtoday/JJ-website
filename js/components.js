@@ -8,15 +8,7 @@ const NAV_HTML = `
   <div class="nav-inner">
     <!-- Left: CALL JJ TODAY | John L. Scott — mirrors Image 2 layout -->
     <a href="/index.html" class="nav-brand">
-      <div class="nav-brand-text">
-        <span class="nav-brand-call">Call "JJ" Today</span>
-        <span class="nav-brand-name">(541) 840-2992</span>
-      </div>
-      <div class="nav-divider"></div>
-      <div class="nav-jls">
-        <span class="nav-jls-top">John L. Scott®</span>
-        <span class="nav-jls-bottom">Real Estate</span>
-      </div>
+      <img src="/images/CALL_JJ_TODAY_JOHN_L_SCOTT_LOGO.svg" alt="Call JJ Today" class="nav-jls-logo" style="height: 44px;">
     </a>
     <!-- Center: nav links -->
     <ul class="nav-links">
