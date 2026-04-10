@@ -19,7 +19,7 @@ const NAV_HTML = `
       <li><a href="/pages/about.html">About JJ</a></li>
     </ul>
     <!-- Right: CTA + hamburger -->
-    <a href="tel:+18663145072" class="nav-cta">Call Now</a>
+    <a href="tel:+15418402992" class="nav-cta">+1 (541) 840-2992</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
