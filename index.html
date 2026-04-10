@@ -85,46 +85,28 @@
      SERVICES
 ══════════════════════════════════════════════ -->
 <section class="services" id="services">
-  <div class="container">
+  <div class="services-inner">
     <span class="section-label fade-up">What JJ Does Best</span>
     <h2 class="section-title fade-up">Every Client. Every Transaction.<br>Unmatched Results.</h2>
 
     <div class="services-grid">
       <div class="service-card fade-up">
-        <div class="service-icon">🏡</div>
-        <h3>Buying a Home</h3>
-        <p>Access every listing in Southern Oregon the moment it hits. JJ's negotiation expertise means you get the home — at the right price.</p>
-        <a href="/pages/buy.html" class="service-link">Start Your Search →</a>
+
+        <h3 class="service-card-title">Buying a Home</h3>
+        <p class="service-card-body">Access every listing in Southern Oregon the moment it hits. JJ's negotiation expertise means you get the home — at the right price.</p>
+        <a href="/pages/buy.html" class="service-card-link">Start Your Search →</a>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">💵</div>
-        <h3>Selling Your Home</h3>
-        <p>99% of list price, 44 avg days on market. JJ's proven system gets sellers more money, faster than anyone in the Valley.</p>
-        <a href="/pages/sell.html" class="service-link">Get a Free Valuation →</a>
+
+        <h3 class="service-card-title">Selling Your Home</h3>
+        <p class="service-card-body">99% of list price, 44 avg days on market. JJ's proven system gets sellers more money, faster than anyone in the Valley.</p>
+        <a href="/pages/sell.html" class="service-card-link">Get a Free Valuation →</a>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">📈</div>
-        <h3>Investment Properties</h3>
-        <p>From single-family rentals to multi-family income properties, JJ delivers ROI-focused guidance on every investment transaction.</p>
-        <a href="/pages/invest.html" class="service-link">Visit Investor Hub →</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon">💎</div>
-        <h3>Luxury Homes</h3>
-        <p>Part of John L. Scott's Luxury Alliance — specializing in properties over $1M with exclusive global marketing reach.</p>
-        <a href="/pages/luxury.html" class="service-link">View Exceptional Homes →</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon">🚛</div>
-        <h3>Relocation</h3>
-        <p>Moving to Southern Oregon? JJ's team handles every detail — neighborhoods, schools, commutes — making your move seamless.</p>
-        <a href="/pages/relocate.html" class="service-link">Relocation Guide →</a>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-icon">🏘️</div>
-        <h3>New Development</h3>
-        <p>Exclusive access to new construction and pre-market opportunities in Willow Bend and emerging Jackson County communities.</p>
-        <a href="/pages/new-homes.html" class="service-link">See New Builds →</a>
+
+        <h3 class="service-card-title">Investment Properties</h3>
+        <p class="service-card-body">From single-family rentals to multi-family income properties, JJ delivers ROI-focused guidance on every investment transaction.</p>
+        <a href="/pages/invest.html" class="service-card-link">Visit Investor Hub →</a>
       </div>
     </div>
   </div>
@@ -209,11 +191,11 @@
             <label class="dark">Email</label>
             <input type="email" name="email" class="light" placeholder="you@email.com" required>
           </div>
-          <button type="submit" class="btn btn-dark btn-full">Get My Free Home Value →</button>
+          <button type="submit" class="btn btn-primary btn-full">Get My Free Home Value →</button>
           <div class="val-trust">
-            <div class="val-trust-item">🔒 Private</div>
-            <div class="val-trust-item">📅 No Obligation</div>
-            <div class="val-trust-item">⚡ 24hr Response</div>
+            <div class="val-trust-item">✓ Private</div>
+            <div class="val-trust-item">✓ No Obligation</div>
+            <div class="val-trust-item">✓ 24hr Response</div>
           </div>
         </form>
 
@@ -231,30 +213,26 @@
      INVESTOR TEASER
 ══════════════════════════════════════════════ -->
 <section class="investor" id="invest">
-  <div class="investor-bg"></div>
   <div class="investor-inner container">
     <span class="section-label fade-up">For Investors</span>
     <div class="investor-grid">
       <div>
-        <h2 class="section-title light fade-up">The Rogue Valley<br>Investor Hub</h2>
-        <p class="section-body light fade-up">Southern Oregon is one of the Pacific Northwest's most underrated investment markets — strong rental demand, appreciating values, and a pipeline of value-add opportunities.</p>
+        <h2 class="section-title fade-up">The Rogue Valley<br>Investor Hub</h2>
+        <p class="section-body fade-up">Southern Oregon is one of the Pacific Northwest's most underrated investment markets — strong rental demand, appreciating values, and a pipeline of value-add opportunities.</p>
         <div class="investor-features fade-up">
           <div class="inv-feature">
-            <div class="inv-icon">🔔</div>
             <div>
               <h4>Deal Alerts — Get Notified First</h4>
               <p>Investment properties the moment they hit — before they're gone.</p>
             </div>
           </div>
           <div class="inv-feature">
-            <div class="inv-icon">📋</div>
             <div>
               <h4>Curated Investment Listings</h4>
               <p>Multi-family, price-reduced, and value-add properties analyzed for you.</p>
             </div>
           </div>
           <div class="inv-feature">
-            <div class="inv-icon">📄</div>
             <div>
               <h4>Free 1031 Exchange Guide</h4>
               <p>JJ's guide to tax-deferred exchanges in Southern Oregon.</p>
@@ -282,22 +260,26 @@
           <input type="range" id="calc-down" min="10" max="40" step="5" value="20">
         </div>
 
-        <div class="roi-results">
-          <div class="roi-metric">
-            <div class="roi-metric-val" id="result-cap">—</div>
-            <div class="roi-metric-label">Cap Rate</div>
+        <div class="calc-results">
+          <div class="calc-result-item">
+            <div class="calc-result-value" id="result-cap">—</div>
+            <div class="calc-result-label">Cap Rate</div>
           </div>
-          <div class="roi-metric">
-            <div class="roi-metric-val" id="result-cf">—</div>
-            <div class="roi-metric-label">Monthly Cash Flow</div>
+          <div class="calc-result-item">
+            <div class="calc-result-value" id="result-cf">—</div>
+            <div class="calc-result-label">Monthly Cash Flow</div>
           </div>
-          <div class="roi-metric">
-            <div class="roi-metric-val" id="result-coc">—</div>
-            <div class="roi-metric-label">Cash-on-Cash</div>
+          <div class="calc-result-item">
+            <div class="calc-result-value" id="result-coc">—</div>
+            <div class="calc-result-label">Cash-on-Cash</div>
           </div>
-          <div class="roi-metric">
-            <div class="roi-metric-val" id="result-grm">—</div>
-            <div class="roi-metric-label">Gross Rent Mult.</div>
+          <div class="calc-result-item">
+            <div class="calc-result-value" id="result-grm">—</div>
+            <div class="calc-result-label">Gross Rent Mult.</div>
+          </div>
+          <div class="calc-result-item calc-down-payment">
+            <div class="calc-result-value" id="result-down">—</div>
+            <div class="calc-result-label">Down Payment</div>
           </div>
         </div>
         <a href="/pages/invest.html#alerts" class="btn btn-primary btn-full" style="margin-top:20px">Get Investment Listings →</a>
@@ -317,8 +299,7 @@
           <img src="https://jls-documents-prod.s3.amazonaws.com/public/users/300001800-8599b928/Website%20Build%202025/JJ-Kramer-headshot-3.jpg" alt="JJ Kramer">
         </div>
         <div class="about-badge">
-          <div class="num">4</div>
-          <div class="lbl">Days per sale</div>
+          <img src="/a-home-sold-every-4-days-logo.svg" alt="A Home Sold Every 4 Days" class="about-badge-img">
         </div>
       </div>
       <div>
@@ -380,13 +361,13 @@ JJ Kramer proved to be an honest, hardworking, salt-of-the-earth realtor with ex
   <div class="container">
     <div class="areas-grid-wrap">
       <div>
-        <span class="section-label fade-up">Coverage Area</span>
+        <span class="section-label fade-up" style="color:rgba(255,255,255,0.7);letter-spacing:0.12em;">Coverage Area</span>
         <h2 class="section-title light fade-up">All of Southern Oregon.</h2>
         <p class="section-body light fade-up">JJ knows every neighborhood, every school district, and every market trend across Jackson County.</p>
-        <a href="/pages/buy.html" class="btn btn-primary" style="margin-top:28px">Browse All Listings →</a>
+        <a href="/pages/buy.html" class="btn btn-secondary light" style="margin-top:28px">Browse All Listings →</a>
       </div>
       <div class="areas-grid fade-up">
-        <a href="/pages/areas/central-point.html" class="area-pill featured">Central Point ⭐</a>
+        <a href="/pages/areas/central-point.html" class="area-pill featured">Central Point</a>
         <a href="/pages/areas/medford.html" class="area-pill">Medford</a>
         <a href="/pages/areas/jacksonville.html" class="area-pill">Jacksonville</a>
         <a href="/pages/areas/eagle-point.html" class="area-pill">Eagle Point</a>
@@ -412,9 +393,8 @@ JJ Kramer proved to be an honest, hardworking, salt-of-the-earth realtor with ex
     <p>One call. The #1 agent. Your best outcome.</p>
   </div>
   <div class="cta-actions">
-    <a href="/pages/contact.html" class="btn btn-dark btn-full">Schedule a Free Consultation</a>
-    <div class="cta-phone">📞 (541) 840-2992</div>
-    <small style="color:rgba(11,31,58,0.5);font-size:12px;">Available 7 days · Call or text anytime</small>
+<a href="tel:+15418402992" class="cta-phone-btn">(541) 840-2992</a>
+    <small style="color:rgba(255,255,255,0.6);font-size:13px;">Available 7 days · Call or text anytime</small>
   </div>
 </div>
 

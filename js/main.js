@@ -47,33 +47,36 @@ function updateROI() {
   document.getElementById('down-display').textContent  = down + '%';
 
   // Calculations
-  const annualRent = rent * 12;
-  const expenses   = annualRent * 0.40; // 40% expense ratio
-  const noi        = annualRent - expenses;
-  const capRate    = ((noi / price) * 100).toFixed(1);
+  const annualRent  = rent * 12;
+  const capRate     = ((annualRent / price) * 100).toFixed(1);
 
   const downAmt     = price * (down / 100);
   const loanAmt     = price - downAmt;
-  const monthlyRate = 0.0725 / 12; // ~7.25% mortgage rate
+  const monthlyRate = 0.07 / 12; // 7% fixed assumed rate
   const n           = 360;
   const mortgage    = loanAmt > 0
     ? loanAmt * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1)
     : 0;
 
-  const monthlyCF = Math.round(rent - (expenses / 12) - mortgage);
-  const cocReturn = downAmt > 0 ? ((monthlyCF * 12 / downAmt) * 100).toFixed(1) : '0.0';
+  const monthlyCF = Math.round(rent - mortgage);
+  const annualCF  = monthlyCF * 12;
+  const cocReturn = downAmt > 0 ? ((annualCF / downAmt) * 100).toFixed(1) : '0.0';
   const grm       = (price / annualRent).toFixed(1);
 
   // Update results
-  document.getElementById('result-cap').textContent = capRate + '%';
-  document.getElementById('result-cf').textContent  =
+  document.getElementById('result-cap').textContent  = capRate + '%';
+  document.getElementById('result-cf').textContent   =
     (monthlyCF >= 0 ? '+$' : '-$') + Math.abs(monthlyCF).toLocaleString();
-  document.getElementById('result-coc').textContent = cocReturn + '%';
-  document.getElementById('result-grm').textContent = grm + 'x';
+  document.getElementById('result-coc').textContent  = cocReturn + '%';
+  document.getElementById('result-grm').textContent  = grm + 'x';
+  document.getElementById('result-down').textContent = formatCurrency(downAmt);
 
   // Color cash flow
   const cfEl = document.getElementById('result-cf');
-  if (cfEl) cfEl.style.color = monthlyCF >= 0 ? '#6EE7A0' : '#FC8181';
+  if (cfEl) {
+    cfEl.classList.toggle('positive', monthlyCF >= 0);
+    cfEl.classList.toggle('negative', monthlyCF < 0);
+  }
 }
 
 // Init calculator

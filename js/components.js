@@ -39,7 +39,7 @@ const FOOTER_HTML = `
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="/calljj-logo.svg" alt="Call JJ Today · John L. Scott" style="height: 75px; width: auto; margin-bottom: 16px; display: block;">
+      <img src="/calljj-logo.svg" alt="Call JJ Today · John L. Scott" style="height: 60px; width: auto; margin-bottom: 16px; display: block;">
       <p>Southern Oregon's #1 ranked real estate agent. Serving Jackson County and the Rogue Valley since 2002.</p>
       <small>Licensed Oregon Broker · John L. Scott Real Estate · Equal Housing Opportunity</small>
     </div>
