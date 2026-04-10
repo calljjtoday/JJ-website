@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact JJ Kramer — Southern Oregon's #1 real estate agent. Schedule a free consultation or call (541) 840-2992 anytime.">
+  <title>Contact JJ Kramer | Schedule a Free Consultation</title>
+  <link rel="canonical" href="https://calljjtoday.com/pages/contact.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,8vw,96px); align-items: start; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <span class="section-label">Get in Touch</span>
+    <h1>Let's Talk About<br><em>Your Next Move.</em></h1>
+    <p>JJ is personally reachable. Call, text, or fill out the form — you'll hear back within hours, not days.</p>
+  </div>
+</div>
+
+<section style="background:var(--white);padding:var(--section-pad);">
+  <div class="container">
+    <div class="contact-grid" style="max-width:var(--max-width);">
+
+      <div>
+        <span class="section-label">Direct Contact</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(26px,3vw,40px);letter-spacing:-1px;margin-bottom:20px;">Reach JJ Directly</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <a href="tel:5418402992" style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius-lg);transition:all 0.2s;text-decoration:none;">
+            <span style="font-size:24px;">📞</span>
+            <div>
+              <div style="font-weight:700;color:var(--black);font-size:15px;">(541) 840-2992</div>
+              <div style="font-size:12px;color:var(--gray);">Call or text — 7 days a week</div>
+            </div>
+          </a>
+          <div style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius-lg);">
+            <span style="font-size:24px;">🏢</span>
+            <div>
+              <div style="font-weight:700;color:var(--black);font-size:15px;">John L. Scott Real Estate</div>
+              <div style="font-size:12px;color:var(--gray);">Southern Oregon Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);box-shadow:var(--shadow-lg);">
+        <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--black);margin-bottom:6px;">Schedule a Consultation</h3>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:24px;">No obligation. JJ responds within hours.</p>
+
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="source" value="Contact Page">
+          <input type="hidden" name="lead-type" value="General Inquiry">
+          <p style="display:none"><input name="bot-field"></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(541) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>I'm looking to…</label>
+            <select name="intent">
+              <option value="sell">Sell my home</option>
+              <option value="buy">Buy a home</option>
+              <option value="invest">Invest in property</option>
+              <option value="other">Other / Just have questions</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea name="message" rows="3" placeholder="Tell JJ a bit about what you're looking for..." style="resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+          <div class="form-trust">
+            <div class="stars">★★★★★</div>
+            <span>300+ reviews · No obligation · Responds within hours</span>
+          </div>
+        </form>
+
+        <div id="contact-success" class="form-success">
+          <div class="checkmark">✓</div>
+          <h4>Message Received!</h4>
+          <p>JJ will be in touch within hours. You can also call him directly at (541) 840-2992.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/js/components.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

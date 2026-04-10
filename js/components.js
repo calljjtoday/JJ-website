@@ -8,7 +8,7 @@ const NAV_HTML = `
   <div class="nav-inner">
     <!-- Left: CALL JJ TODAY | John L. Scott — mirrors Image 2 layout -->
     <a href="/index.html" class="nav-brand">
-      <img src="/images/CALL_JJ_TODAY_JOHN_L_SCOTT_LOGO.svg" alt="Call JJ Today" class="nav-jls-logo" style="height: 44px;">
+      <img src="/calljj-logo.svg" alt="Call JJ Today" class="nav-jls-logo">
     </a>
     <!-- Center: nav links -->
     <ul class="nav-links">
@@ -19,7 +19,7 @@ const NAV_HTML = `
       <li><a href="/pages/about.html">About JJ</a></li>
     </ul>
     <!-- Right: CTA + hamburger -->
-    <a href="/pages/sell.html" class="nav-cta">Free Home Value</a>
+    <a href="tel:+18663145072" class="nav-cta">Call Now</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -39,13 +39,7 @@ const FOOTER_HTML = `
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <span class="footer-call-label">Call "JJ" Today</span>
-      <span class="footer-brand-name">JJ Kramer</span>
-      <div class="footer-jls-bar">
-        <span class="footer-jls-serif">John L. Scott®</span>
-        <div class="footer-jls-divider"></div>
-        <span class="footer-jls-label">Real Estate<br>(541) 840-2992</span>
-      </div>
+      <img src="/calljj-logo.svg" alt="Call JJ Today · John L. Scott" style="height: 75px; width: auto; margin-bottom: 16px; display: block;">
       <p>Southern Oregon's #1 ranked real estate agent. Serving Jackson County and the Rogue Valley since 2002.</p>
       <small>Licensed Oregon Broker · John L. Scott Real Estate · Equal Housing Opportunity</small>
     </div>

@@ -27,7 +27,7 @@
     .fade-up:nth-child(2) { transition-delay: 0.1s; }
     .fade-up:nth-child(3) { transition-delay: 0.2s; }
     .fade-up:nth-child(4) { transition-delay: 0.3s; }
-    .nav-links a.active { color: var(--gold-light); }
+    .nav-links a.active { color: var(--white); }
   </style>
 </head>
 <body>
@@ -42,106 +42,43 @@
   <div class="hero-bg"></div>
   <div class="hero-grid-overlay"></div>
 
-  <div class="hero-inner"></div>
+  <div class="hero-inner">
 
-  <div class="hero-left">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      Southern Oregon's #1 Agent · 2023, 2024 &amp; 2025
-    </div>
-    <h1 class="hero-title">
-      Southern Oregon<br>Real Estate,
-      <em>Done Right.</em>
-    </h1>
+    <h1 class="hero-title">Southern Oregon<br>Real Estate, <em>Done Right.</em></h1>
     <p class="hero-subtitle">
       JJ Kramer closes <strong>a home every 4 days</strong> — averaging
       99% of list price and 44 days on market. Whether you're buying,
       selling, or investing in the Rogue Valley, there's one call to make.
     </p>
-    <div class="hero-ctas">
-      <a href="/pages/sell.html" class="btn btn-primary">🏠 Get My Home's Value</a>
-      <a href="/pages/buy.html" class="btn btn-secondary">Browse Listings →</a>
+
+    <div class="hero-paths">
+      <p class="hero-paths-label">What brings you here?</p>
+      <a class="hero-path-card" href="/pages/sell.html" id="path-sell">
+        <div>
+          <div class="hero-path-title">I'm Looking to Sell</div>
+          <div class="hero-path-sub">Get a free home valuation from JJ</div>
+        </div>
+        <span class="hero-path-arrow">→</span>
+      </a>
+      <a class="hero-path-card" href="/pages/buy.html" id="path-buy">
+        <div>
+          <div class="hero-path-title">I'm Looking to Buy</div>
+          <div class="hero-path-sub">Browse homes in Southern Oregon</div>
+        </div>
+        <span class="hero-path-arrow">→</span>
+      </a>
     </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">#1</div>
-        <div class="stat-label">Jackson County</div>
-      </div>
-      <div>
-        <div class="stat-num">#3</div>
-        <div class="stat-label">Oregon Statewide</div>
-      </div>
-      <div>
-        <div class="stat-num">13×</div>
-        <div class="stat-label">Top 1% Producer</div>
-      </div>
-      <div>
-        <div class="stat-num">99%</div>
-        <div class="stat-label">Of List Price</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <!-- Netlify form requires hidden input for form-name -->
-    <div class="hero-card">
-      <h3>Get Your Free Home Value</h3>
-      <p>JJ's personal market analysis within 24 hours</p>
-
-      <form id="hero-form" name="home-valuation-hero" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="home-valuation-hero">
-        <input type="hidden" name="source" value="Hero Form">
-        <input type="hidden" name="lead-type" value="Seller Lead">
-        <p style="display:none"><input name="bot-field"></p>
-
-        <div class="form-group">
-          <label>Property Address</label>
-          <input type="text" name="address" placeholder="123 Main St, Medford, OR" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="Full Name" required>
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" name="phone" placeholder="(541) 000-0000" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>I'm looking to…</label>
-          <select name="intent">
-            <option value="sell">Sell my home</option>
-            <option value="buy">Buy a home</option>
-            <option value="invest">Invest in property</option>
-            <option value="value">Just curious about value</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Get My Free Valuation →</button>
-        <div class="form-trust">
-          <div class="stars">★★★★★</div>
-          <span>300+ reviews · No obligation · 24hr response</span>
-        </div>
-      </form>
-
-      <div id="hero-success" class="form-success">
-        <div class="checkmark">✓</div>
-        <h4>Request Received!</h4>
-        <p>JJ will personally review your property and reach out within 24 hours.</p>
-      </div>
-    </div>
-  </div>
-
   </div>
 </section>
+
 
 <!-- ══════════════════════════════════════════════
      TRUST BAR
 ══════════════════════════════════════════════ -->
 <div class="trust-bar">
-  <div class="trust-item">🏆 #1 Agent Jackson County — 3 Years Running</div>
-  <div class="trust-item">📞 (541) 840-2992 — Call Anytime</div>
-  <div class="trust-item">⚡ A Home Sold Every 4 Days</div>
+  <div class="trust-item">#1 Agent Jackson County — 3 Years Running</div>
+  <div class="trust-item">(541) 840-2992 — Call Anytime</div>
+  <div class="trust-item">A Home Sold Every 4 Days</div>
 </div>
 
 <!-- ══════════════════════════════════════════════
@@ -281,8 +218,8 @@
         </form>
 
         <div id="valuation-success" class="form-success" style="background:none;">
-          <div class="checkmark" style="background:rgba(201,146,42,0.1);border-color:var(--gold);">✓</div>
-          <h4 style="color:var(--navy);">Request Received!</h4>
+          <div class="checkmark" style="background:var(--blue-pale);border-color:var(--blue);">✓</div>
+          <h4 style="color:var(--black);">Request Received!</h4>
           <p style="color:#666;">JJ will personally review your property and be in touch within 24 hours.</p>
         </div>
       </div>
@@ -386,7 +323,7 @@
       </div>
       <div>
         <span class="section-label fade-up">About JJ</span>
-        <h2 class="section-title fade-up">Jordan "JJ" Kramer<br><em style="font-style:italic;color:var(--gold)">Southern Oregon's Top Producer.</em></h2>
+        <h2 class="section-title fade-up">Jordan "JJ" Kramer<br><em style="font-style:italic;color:var(--blue-bright)">Southern Oregon's Top Producer.</em></h2>
         <p class="section-body fade-up">Since 2002, JJ has built his reputation on one principle: <strong>super communication is the key.</strong> He's personally reachable, passionately involved, and fiercely committed to your outcome. His full-time team of 8 ensures every client gets white-glove service from first conversation to closing day.</p>
         <div class="about-accolades fade-up">
           <div class="accolade"><div class="accolade-dot"></div><span>#1 Agent in Southern Oregon 2023, 2024 &amp; 2025</span></div>

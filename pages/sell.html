@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free home valuation in Southern Oregon. JJ Kramer averages 99% of list price and 44 days on market. Get your accurate home value today.">
-  <title>Free Home Valuation | Sell Your Home | JJ Kramer</title>
+  <meta name="description" content="Find out what your Southern Oregon home is worth. JJ Kramer delivers a real CMA — not a Zestimate. #1 Agent in Jackson County, 99% of list price. Free, no obligation.">
+  <title>Free Home Valuation | What Is My Home Worth? | JJ Kramer</title>
   <link rel="canonical" href="https://calljjtoday.com/pages/sell.html">
   <link rel="stylesheet" href="/css/style.css">
   <style>
-    .fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
-    .fade-up.visible { opacity:1; transform:none; }
-    .sell-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px; }
-    .sell-stat { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:24px; text-align:center; }
-    .sell-stat .num { font-family:var(--font-serif); font-size:40px; font-weight:900; color:var(--gold); }
-    .sell-stat .lbl { font-size:12px; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.5px; margin-top:6px; }
-    .sell-process { background:var(--white); padding:var(--section-pad); }
-    .process-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:48px; }
-    .process-step { text-align:center; padding:32px 24px; background:var(--cream); border-radius:var(--radius-lg); border:1px solid rgba(0,0,0,0.06); }
-    .process-num { width:48px; height:48px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold); font-weight:800; font-size:18px; margin:0 auto 16px; }
-    .process-step h3 { font-size:16px; font-weight:700; color:var(--navy); margin-bottom:8px; }
-    .process-step p { font-size:13px; color:#777; line-height:1.6; }
-    @media(max-width:600px){ .sell-stats{grid-template-columns:1fr 1fr;} .sell-stats .sell-stat:last-child{grid-column:1/-1;} }
+    /* ── STAT STRIP ── */
+    .sell-stats { background: var(--black); padding: clamp(48px,6vw,72px) clamp(20px,5vw,80px); }
+    .sell-stats-inner { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; max-width: var(--max-width); margin: 0 auto; text-align: center; }
+    .sell-stat-num { font-family: var(--font-serif); font-size: clamp(40px,5vw,64px); font-weight: 900; color: var(--white); line-height: 1; }
+    .sell-stat-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; }
+
+    /* ── HOW IT WORKS ── */
+    .how-it-works { background: var(--off-white); padding: var(--section-pad); }
+    .how-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .how-step { text-align: center; padding: 36px 28px; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+    .how-step-num { width: 52px; height: 52px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-family: var(--font-serif); font-size: 22px; font-weight: 900; margin: 0 auto 20px; }
+    .how-step h3 { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+    .how-step p { font-size: 14px; line-height: 1.65; color: var(--text-light); }
+
+    @media (max-width: 768px) {
+      .how-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .sell-stats-inner { grid-template-columns: 1fr 1fr; }
+      .sell-stats-inner .sell-stat:last-child { grid-column: 1 / -1; }
+    }
   </style>
 </head>
 <body>
@@ -31,169 +39,182 @@
   <div class="page-hero-bg"></div>
   <div class="page-hero-inner">
     <span class="section-label">Sell Your Home</span>
-    <h1>What Is Your Home<br>Worth <em>Today?</em></h1>
-    <p>JJ's free valuation combines real-time MLS data with 20+ years of Rogue Valley expertise — not just an algorithm.</p>
-    <div class="sell-stats">
-      <div class="sell-stat">
-        <div class="num">99%</div>
-        <div class="lbl">Of List Price</div>
+    <h1>Find Out What Your Southern Oregon<br><em>Home Is Worth</em></h1>
+    <p>JJ Kramer delivers a real CMA — not a Zestimate. Personal. Accurate. Free.</p>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:22px;">
+      <div style="display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);">
+        <span style="color:var(--blue-bright);">★</span> #1 Agent Jackson County
       </div>
-      <div class="sell-stat">
-        <div class="num">44</div>
-        <div class="lbl">Avg Days on Market</div>
-      </div>
-      <div class="sell-stat">
-        <div class="num">4</div>
-        <div class="lbl">Days Per Sale</div>
+      <div style="display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.75);">
+        <span style="color:var(--blue-bright);">★</span> 99% of List Price
       </div>
     </div>
   </div>
 </div>
 
 <!-- VALUATION FORM -->
-<section class="valuation" style="background:var(--white);">
+<section style="background:var(--off-white);padding:var(--section-pad);">
   <div class="container">
-    <div class="val-grid">
-      <div>
-        <span class="section-label fade-up">Why JJ?</span>
-        <h2 class="section-title fade-up">More Money.<br>Less Stress.<br>Faster Close.</h2>
-        <p class="section-body fade-up">JJ's sellers consistently walk away with more than they expected — because preparation, pricing, and negotiation are where he excels.</p>
-        <div class="val-steps" style="margin-top:32px;">
-          <div class="val-step fade-up">
-            <div class="val-step-num">1</div>
-            <div class="val-step-text"><strong>Submit your property details</strong><span>Takes 60 seconds</span></div>
-          </div>
-          <div class="val-step fade-up">
-            <div class="val-step-num">2</div>
-            <div class="val-step-text"><strong>JJ personally reviews your home</strong><span>Real CMA, not a Zestimate</span></div>
-          </div>
-          <div class="val-step fade-up">
-            <div class="val-step-num">3</div>
-            <div class="val-step-text"><strong>You get a full market report</strong><span>Within 24 hours, zero obligation</span></div>
-          </div>
-          <div class="val-step fade-up">
-            <div class="val-step-num">4</div>
-            <div class="val-step-text"><strong>Decide with confidence</strong><span>JJ walks you through every option</span></div>
-          </div>
-        </div>
-      </div>
+    <div style="max-width:600px;margin:0 auto;">
+      <div class="val-tool">
+        <h3>Get Your Free Home Valuation</h3>
+        <div class="val-tool-sub">No pressure. JJ responds personally within 24 hours.</div>
 
-      <div class="val-tool fade-up">
-        <h3>Free Home Valuation</h3>
-        <div class="val-tool-sub">No pressure. JJ responds within 24 hours.</div>
-
-        <form id="valuation-form" name="home-valuation-sell" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form id="sell-form" name="home-valuation-sell" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="home-valuation-sell">
           <input type="hidden" name="source" value="Sell Page">
           <input type="hidden" name="lead-type" value="Seller Lead">
           <p style="display:none"><input name="bot-field"></p>
 
           <div class="form-group">
-            <label class="dark">Property Address</label>
-            <input type="text" name="address" class="light" placeholder="123 Main St, Medford, OR 97501" required>
+            <label>Property Address</label>
+            <input type="text" name="address" placeholder="123 Main St, Medford, OR 97501" required>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label class="dark">Bedrooms</label>
-              <select name="bedrooms" class="light">
-                <option>1 Bed</option><option>2 Beds</option><option selected>3 Beds</option><option>4 Beds</option><option>5+ Beds</option>
+              <label>Bedrooms</label>
+              <select name="bedrooms">
+                <option>1 Bed</option>
+                <option>2 Beds</option>
+                <option selected>3 Beds</option>
+                <option>4 Beds</option>
+                <option>5+ Beds</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="dark">Bathrooms</label>
-              <select name="bathrooms" class="light">
-                <option>1 Bath</option><option selected>2 Baths</option><option>3 Baths</option><option>4+ Baths</option>
+              <label>Bathrooms</label>
+              <select name="bathrooms">
+                <option>1 Bath</option>
+                <option selected>2 Baths</option>
+                <option>3 Baths</option>
+                <option>4+ Baths</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label class="dark">Property Type</label>
-            <select name="property-type" class="light">
-              <option>Single Family Home</option><option>Condo/Townhome</option><option>Multi-Family</option><option>Land/Lot</option><option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="dark">When are you thinking of selling?</label>
-            <select name="timeline" class="light">
-              <option>ASAP</option><option>1–3 months</option><option>3–6 months</option><option>6–12 months</option><option>Just exploring</option>
-            </select>
+            <label>Approx. Sq Ft <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--gray);">(optional)</span></label>
+            <input type="text" name="sqft" placeholder="e.g. 1,850">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label class="dark">Your Name</label>
-              <input type="text" name="name" class="light" placeholder="Full Name" required>
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Full Name" required>
             </div>
             <div class="form-group">
-              <label class="dark">Phone</label>
-              <input type="tel" name="phone" class="light" placeholder="(541) 000-0000" required>
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(541) 000-0000" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="dark">Email</label>
-            <input type="email" name="email" class="light" placeholder="you@email.com" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@email.com" required>
           </div>
-          <button type="submit" class="btn btn-dark btn-full">Get My Free Home Value →</button>
-          <div class="val-trust">
-            <div class="val-trust-item">🔒 Confidential</div>
+          <div class="form-group">
+            <label>Timeline</label>
+            <select name="timeline">
+              <option>ASAP</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Get My Free Home Valuation →</button>
+          <div class="val-trust" style="justify-content:center;">
+            <div class="val-trust-item">🔒 Private</div>
             <div class="val-trust-item">📅 No Obligation</div>
             <div class="val-trust-item">⚡ 24hr Response</div>
           </div>
         </form>
 
-        <div id="valuation-success" class="form-success" style="background:none;">
-          <div class="checkmark" style="background:rgba(201,146,42,0.1);border-color:var(--gold);">✓</div>
-          <h4 style="color:var(--navy);">You're all set!</h4>
-          <p style="color:#666;">JJ will personally review your property and reach out within 24 hours. Feel free to call anytime at <strong>(541) 840-2992</strong>.</p>
+        <div id="sell-success" class="form-success">
+          <div class="checkmark">✓</div>
+          <h4>You're All Set!</h4>
+          <p>JJ will personally review your property and reach out within 24 hours. You can also call anytime at <strong>(541) 840-2992</strong>.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SELLING PROCESS -->
-<section class="sell-process">
+<!-- WHY SELL WITH JJ — STAT STRIP -->
+<div class="sell-stats">
+  <div class="sell-stats-inner">
+    <div class="sell-stat fade-up">
+      <div class="sell-stat-num">99%</div>
+      <div class="sell-stat-label">Of List Price — Year-Round</div>
+    </div>
+    <div class="sell-stat fade-up">
+      <div class="sell-stat-num">44</div>
+      <div class="sell-stat-label">Avg Days on Market</div>
+    </div>
+    <div class="sell-stat fade-up">
+      <div class="sell-stat-num">300+</div>
+      <div class="sell-stat-label">5-Star Reviews</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
   <div class="container">
-    <span class="section-label fade-up">The JJ Process</span>
-    <h2 class="section-title fade-up">How JJ Gets You<br>Top Dollar</h2>
-    <div class="process-grid">
-      <div class="process-step fade-up">
-        <div class="process-num">1</div>
-        <h3>Accurate Pricing</h3>
-        <p>JJ's deep market knowledge means your home is priced to attract maximum buyer competition — not just priced to sit.</p>
+    <span class="section-label fade-up">Simple Process</span>
+    <h2 class="section-title fade-up">How Your Free Valuation Works</h2>
+    <div class="how-grid">
+      <div class="how-step fade-up">
+        <div class="how-step-num">1</div>
+        <h3>Submit Your Address</h3>
+        <p>Fill out the form above. Takes 30 seconds — just your address and a few details to get started.</p>
       </div>
-      <div class="process-step fade-up">
-        <div class="process-num">2</div>
-        <h3>Professional Presentation</h3>
-        <p>Photography, staging guidance, and JJ's network of contractors ensure your home shows at its absolute best.</p>
+      <div class="how-step fade-up">
+        <div class="how-step-num">2</div>
+        <h3>JJ Reviews Your Property</h3>
+        <p>JJ personally analyzes comparable sales, market conditions, and your home's unique features. Real expertise — not just an algorithm.</p>
       </div>
-      <div class="process-step fade-up">
-        <div class="process-num">3</div>
-        <h3>Maximum Exposure</h3>
-        <p>MLS, Zillow, Realtor.com, social media, email campaigns, and JJ's personal buyer network — every channel, every day.</p>
-      </div>
-      <div class="process-step fade-up">
-        <div class="process-num">4</div>
-        <h3>Expert Negotiation</h3>
-        <p>JJ's 99% list price average isn't luck — it's the result of skilled negotiation on every offer, every time.</p>
-      </div>
-      <div class="process-step fade-up">
-        <div class="process-num">5</div>
-        <h3>Smooth Closing</h3>
-        <p>JJ's full-time escrow team handles every detail from accepted offer to keys — keeping you informed at every step.</p>
+      <div class="how-step fade-up">
+        <div class="how-step-num">3</div>
+        <h3>Receive Your Market Report</h3>
+        <p>Within 24 hours, JJ delivers a complete pricing analysis. You'll know exactly what your home is worth — with zero obligation.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <span class="section-label fade-up">Client Stories</span>
+    <h2 class="section-title fade-up">What Sellers Are Saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"JJ and his team definitely know their jobs, and do them with expertise. No question goes unanswered. We weren't selling a million dollar property, but we sure felt like we did. Thanks for such a pleasant experience."</p>
+        <div class="t-author">Gary Trotter</div>
+        <div class="t-detail">Seller · Medford, OR</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"We had trouble selling our house for over a year until we hired JJ and then everything started to fall into place he gave us good advice and found a seller quickly he also helped us find our new house! Thanks again JJ!"</p>
+        <div class="t-author">David Uribe</div>
+        <div class="t-detail">Seller/Buyer · Jackson County, OR</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="/pages/about.html#reviews" class="btn btn-secondary">Read All Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
 <div class="cta-band">
   <div>
     <h2>Ready to Find Out<br>What Your Home Is Worth?</h2>
     <p>No obligation. JJ responds within 24 hours.</p>
   </div>
   <div class="cta-actions">
-    <a href="tel:5418402992" class="btn btn-dark btn-full">📞 Call JJ Directly</a>
-    <div class="cta-phone">(541) 840-2992</div>
-    <small style="color:rgba(11,31,58,0.5);font-size:12px;">Call or text anytime, 7 days a week</small>
+    <a href="#sell-form" class="btn btn-dark btn-full">Get My Free Valuation →</a>
+    <div class="cta-phone">📞 (541) 840-2992</div>
+    <small style="color:rgba(255,255,255,0.3);font-size:12px;">Call or text anytime · 7 days a week</small>
   </div>
 </div>
 

@@ -124,8 +124,9 @@ function handleFormSubmit(formId, successId) {
 }
 
 // Wire up all forms
-handleFormSubmit('valuation-form', 'valuation-success');
 handleFormSubmit('hero-form', 'hero-success');
+handleFormSubmit('valuation-form', 'valuation-success');
+handleFormSubmit('sell-form', 'sell-success');
 handleFormSubmit('investor-form', 'investor-success');
 handleFormSubmit('contact-form', 'contact-success');
 
